@@ -17,6 +17,8 @@ namespace Copypasta
             this.z = z;
         }
 
+        //Don't add MyVector3(Vector3 v) because then we are back at the problem when Unity is casting Vector2->Vector3 which might introduce bugs
+
 
 
         //
