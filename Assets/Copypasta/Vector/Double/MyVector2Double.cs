@@ -22,6 +22,8 @@ namespace Copypasta
         // Generate new vectors
         //
 
+        public static MyVector2Double Right => new(1, 0);
+        public static MyVector2Double Up => new(0, 1);
         public static MyVector2Double Zero => new(0, 0);
         public static MyVector2Double One => new(1, 1);
 
