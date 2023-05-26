@@ -24,7 +24,6 @@ namespace Copypasta
 
         public static MyVector2Double Zero => new(0, 0);
         public static MyVector2Double One => new(1, 1);
-        public Vector2 ToVector2 => new((float)x, (float)y);
 
 
 
@@ -35,6 +34,7 @@ namespace Copypasta
         public MyVector2Double normalized => Normalize(this);
         public double magnitude => Magnitude(this);
         public double sqrMagnitude => SqrMagnitude(this);
+        public Vector2 ToVector2 => new((float)x, (float)y);
 
 
 
