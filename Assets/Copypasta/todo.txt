@@ -1,0 +1,2 @@
+TODO:
+- When comparing two vectors with double precision, should the tolerance be smaller than in the float case?

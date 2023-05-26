@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UsefulMethods : MonoBehaviour
+namespace Copypasta
 {
+    public class UsefulMethods
+    {
     
+    }
 }
