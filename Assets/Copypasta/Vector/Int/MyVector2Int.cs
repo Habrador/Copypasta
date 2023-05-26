@@ -25,6 +25,14 @@ namespace Copypasta
 
 
 
+        //
+        // Properties
+        //
+
+        public Vector2Int ToVector2Int => new(x, y);
+
+
+
         //Returns true if the given vector is exactly equal to this vector
         public bool Equals(MyVector2Int other)
         {

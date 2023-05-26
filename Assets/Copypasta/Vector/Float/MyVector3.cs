@@ -40,7 +40,7 @@ namespace Copypasta
         public MyVector3 normalized => Normalize(this);
         public double magnitude => Magnitude(this);
         public double sqrMagnitude => SqrMagnitude(this);
-        public Vector3 ToVector3 => new((float)x, (float)y, (float)z);
+        public Vector3 ToVector3 => new(x, y, z);
 
 
 
