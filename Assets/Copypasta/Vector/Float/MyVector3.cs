@@ -34,6 +34,16 @@ namespace Copypasta
 
 
         //
+        // Properties
+        //
+
+        public MyVector3 normalized => Normalize(this);
+        public double magnitude => Magnitude(this);
+        public double sqrMagnitude => SqrMagnitude(this);
+
+
+
+        //
         // Vector operations
         //
 
@@ -163,5 +173,6 @@ namespace Copypasta
 
         //== and != are not implemented because it makes it confusing if you want to take floating point precision into account
         //Use Equals or RoughlyEquals
+        //Division is not implemented because its slow anyway, use vec*(1/...) if you want to divide a vector
     }
 }
