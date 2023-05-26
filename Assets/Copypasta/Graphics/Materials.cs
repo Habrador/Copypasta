@@ -10,40 +10,37 @@ namespace Copypasta
         private static readonly Material matRed;
         private static readonly Material matBlue;
         private static readonly Material matYellow;
-        private static readonly Material matGray;
         private static readonly Material matBlack;
         private static readonly Material matGreen;
         private static readonly Material matOrange;
 
         public enum ColorOptions
         {
-            White, Red, Blue, Yellow, Gray, Black, Green, Orange
+            White, Red, Blue, Yellow, Black, Green, Orange
         }
 
 
 
         static Materials()
         {
-            matWhite = GetMaterial(Color.white);
+            matWhite = GetBaseMaterial(Color.white);
 
-            matRed = GetMaterial(Color.red);
+            matRed = GetBaseMaterial(Color.red);
 
-            matBlue = GetMaterial(Color.blue);
+            matBlue = GetBaseMaterial(Color.blue);
 
-            matYellow = GetMaterial(Color.yellow);
+            matYellow = GetBaseMaterial(Color.yellow);
 
-            matGray = GetMaterial(Color.gray);
+            matBlack = GetBaseMaterial(Color.black);
 
-            matBlack = GetMaterial(Color.black);
+            matGreen = GetBaseMaterial(Color.green);
 
-            matGreen = GetMaterial(Color.green);
-
-            matOrange = GetMaterial(new Color32(255, 125, 0, 255));
+            matOrange = GetBaseMaterial(new Color32(255, 125, 0, 255));
         }
 
 
 
-        private static Material GetMaterial(Color color)
+        private static Material GetBaseMaterial(Color color)
         {
             Material baseMaterial = new(Shader.Find("Universal Render Pipeline/Unlit"));
 
@@ -62,7 +59,6 @@ namespace Copypasta
                 (ColorOptions.Blue) => matBlue,
                 (ColorOptions.Yellow) => matYellow,
                 (ColorOptions.White) => matWhite,
-                (ColorOptions.Gray) => matGray,
                 (ColorOptions.Black) => matBlack,
                 (ColorOptions.Green) => matGreen,
                 (ColorOptions.Orange) => matOrange,
