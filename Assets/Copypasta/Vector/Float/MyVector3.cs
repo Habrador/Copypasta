@@ -8,9 +8,7 @@ namespace Copypasta
     [System.Serializable]
     public struct MyVector3
     {
-        public float x;
-        public float y;
-        public float z;
+        public float x, y, z;
 
         public MyVector3(float x, float y, float z)
         {
@@ -84,11 +82,11 @@ namespace Copypasta
 
         public static MyVector3 Normalize(MyVector3 v)
         {
-            float v_magnitude = Magnitude(v);
+            float vMagnitude = Magnitude(v);
 
-            MyVector3 v_normalized = new(v.x / v_magnitude, v.y / v_magnitude, v.z / v_magnitude);
+            MyVector3 vNormalized = v * (1f / vMagnitude);
 
-            return v_normalized;
+            return vNormalized;
         }
 
         public static MyVector3 Cross(MyVector3 a, MyVector3 b)

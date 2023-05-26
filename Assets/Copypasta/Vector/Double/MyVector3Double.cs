@@ -83,11 +83,11 @@ namespace Copypasta
 
         public static MyVector3Double Normalize(MyVector3Double v)
         {
-            double v_magnitude = Magnitude(v);
+            double vMagnitude = Magnitude(v);
 
-            MyVector3Double v_normalized = new(v.x / v_magnitude, v.y / v_magnitude, v.z / v_magnitude);
+            MyVector3Double vNormalized = v * (1.0 / vMagnitude);
 
-            return v_normalized;
+            return vNormalized;
         }
 
         public static MyVector3Double Cross(MyVector3Double a, MyVector3Double b)
@@ -123,7 +123,7 @@ namespace Copypasta
             double yDiff = this.y - other.y;
             double zDiff = this.z - other.z;
 
-            float e = 0.00001f;
+            double e = 0.00001;
 
             //If all of the differences are around 0
             if (
