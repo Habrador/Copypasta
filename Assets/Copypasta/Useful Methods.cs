@@ -36,5 +36,33 @@ namespace Copypasta
 
             return newAverage;
         }
+
+
+
+        //Take a screenshot
+        //Path should be like "C:/Download/Temp/"
+        public static void PrintScreen(string path)
+        {
+            System.DateTime localDate = System.DateTime.Now;
+
+            string dateTime = localDate.ToString();
+
+            string year = dateTime.Substring(0, 4);
+            string month = dateTime.Substring(5, 2);
+            string day = dateTime.Substring(8, 2);
+            string hours = dateTime.Substring(11, 2);
+            string minutes = dateTime.Substring(14, 2);
+            string seconds = dateTime.Substring(17, 2);
+
+            //Has to be - and not _ or it wont sort the screenshots in correct order
+            string timeStamp = $"{year}-{month}-{day}--{hours}-{minutes}-{seconds}";
+
+            //Debug.Log(dateTime);
+            //Debug.Log(timeStamp);
+
+            string fileName = $"test_{timeStamp}.png";
+
+            ScreenCapture.CaptureScreenshot(path + fileName);
+        }
     }
 }
