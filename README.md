@@ -32,6 +32,12 @@ Copy paste the **_Copypasta** folder into your project folder.
 	- **DisplayLineSegments.** Draws multiple line segments. 
 	
 
-- **Useful Methods.**
+- **Useful Methods.** A collection of useful methods. 
 
-	- ****
+	- **Remap.** Remap value from range 1 to range 2.
+	
+	- **ClampListIndex.** This one is my favorite. If you have a list with 5 items (and it also loops), and you want item 234 you can use this method and it still works.
+
+	- **AddValueToAverage.** If you want to add to an average - and you don't want to calculate the average every time because it's costly, you can use this method to add to an already existing average. 
+
+	- **PrintScreen.** Takes a screenshot of your Unity project. 
