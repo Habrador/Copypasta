@@ -40,7 +40,7 @@ namespace Copypasta
 
             matOrange = GetBaseMaterial(new Color32(255, 125, 0, 255));
 
-            matGreen = GetBaseMaterial(Color.magenta);
+            matPink = GetBaseMaterial(Color.magenta);
         }
 
 

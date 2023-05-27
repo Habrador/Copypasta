@@ -18,6 +18,7 @@ namespace Copypasta
 
 
         //Generate vertices on the edge of a circle in 2d space
+        //Generates a double vertex on the start position so they line connects to a circle
         //^y
         //|
         //|

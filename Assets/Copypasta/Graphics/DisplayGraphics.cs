@@ -16,6 +16,8 @@ namespace Copypasta
             //Generate the vertices and the indices
             List<Vector3> vertices = circle.GetCircleVertices(space, resolution);
 
+            //Debug.Log(vertices.Count);
+
             DrawLine(vertices, color);
         }
 
@@ -63,7 +65,15 @@ namespace Copypasta
         //
         // Draw vertices
         //
-        
+
+        public static void DrawVertices(List<Vector3> vertices, Materials.ColorOptions color)
+        {
+            Material material = Materials.GetMaterial(color);
+
+            DrawVertices(vertices, material);
+        }
+
+
         public static void DrawVertices(List<Vector3> vertices, Material material)
         {
             //Generate the indices
