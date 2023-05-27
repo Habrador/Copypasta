@@ -10,52 +10,13 @@ namespace Copypasta
         // Draw a circle 
         //
         
-        //The circle can become a triangle if you lower resolution
-        public enum Space2D { XY, XZ, ZY };
-
-        public static void DrawCircle(Circle circle, Materials.ColorOptions color, Space2D space, int resolution = 100)
+        //The circle can become a triangle if you lower resolution!
+        public static void DrawCircle(Circle circle, Materials.ColorOptions color, Circle.Space2D space, int resolution = 100)
         {
             //Generate the vertices and the indices
-            List<Vector3> vertices = new();
-            List<int> indices = new();
+            List<Vector3> vertices = circle.GetCircleVertices(space, resolution);
 
-            float angleStep = 360f / resolution;
-
-            float angle = 0f;
-
-            for (int i = 0; i < resolution + 1; i++)
-            {
-                float x = circle.radius * Mathf.Cos(angle * Mathf.Deg2Rad);
-                float y = circle.radius * Mathf.Sin(angle * Mathf.Deg2Rad);
-
-                Vector3 vertex = new Vector3(x, y, 0f) + circle.center;
-
-                if (space == Space2D.ZY)
-                {
-                    vertex = new Vector3(0f, y, x) + circle.center;
-                }
-                else if (space == Space2D.XZ)
-                {
-                    vertex = new Vector3(x, 0f, y) + circle.center;
-                }
-
-
-                vertices.Add(vertex);
-                indices.Add(i);
-
-                angle += angleStep;
-            }
-
-            //Generate the mesh
-            Mesh m = new();
-
-            m.SetVertices(vertices);
-            m.SetIndices(indices, MeshTopology.LineStrip, 0);
-
-            //Display the mesh
-            Material material = Materials.GetMaterial(color);
-
-            Graphics.DrawMesh(m, Vector3.zero, Quaternion.identity, material, 0, Camera.main, 0);
+            DrawLine(vertices, color);
         }
 
 

@@ -13,10 +13,13 @@ namespace Copypasta
         private static readonly Material matBlack;
         private static readonly Material matGreen;
         private static readonly Material matOrange;
+        private static readonly Material matPink;
+
+
 
         public enum ColorOptions
         {
-            White, Red, Blue, Yellow, Black, Green, Orange
+            White, Red, Blue, Yellow, Black, Green, Orange, Pink
         }
 
 
@@ -36,12 +39,16 @@ namespace Copypasta
             matGreen = GetBaseMaterial(Color.green);
 
             matOrange = GetBaseMaterial(new Color32(255, 125, 0, 255));
+
+            matGreen = GetBaseMaterial(Color.magenta);
         }
 
 
 
         private static Material GetBaseMaterial(Color color)
         {
+            //Material baseMaterial = new(Shader.Find("Unlit/Color"));
+
             Material baseMaterial = new(Shader.Find("Universal Render Pipeline/Unlit"));
 
             baseMaterial.color = color;
@@ -62,6 +69,7 @@ namespace Copypasta
                 (ColorOptions.Black) => matBlack,
                 (ColorOptions.Green) => matGreen,
                 (ColorOptions.Orange) => matOrange,
+                (ColorOptions.Pink) => matPink,
                 _ => matWhite,
             };
         }
