@@ -41,7 +41,7 @@ namespace Copypasta
 
         //Take a screenshot
         //Path should be like "C:/Download/Temp/"
-        public static void PrintScreen(string path)
+        public static void PrintScreen(string name, string path)
         {
             System.DateTime localDate = System.DateTime.Now;
 
@@ -60,7 +60,7 @@ namespace Copypasta
             //Debug.Log(dateTime);
             //Debug.Log(timeStamp);
 
-            string fileName = $"test_{timeStamp}.png";
+            string fileName = $"{name}_{timeStamp}.png";
 
             ScreenCapture.CaptureScreenshot(path + fileName);
         }
