@@ -30,7 +30,7 @@ namespace Copypasta
         //Add value to average
         //http://www.bennadel.com/blog/1627-create-a-running-average-without-storing-individual-values.htm
         //count - how many values does the average consist of
-        public static float AddValueToAverage(float oldAverage, float valueToAdd, float count)
+        public static float AddValueToRunningAverage(float oldAverage, float valueToAdd, float count)
         {
             float newAverage = ((oldAverage * count) + valueToAdd) / (count + 1f);
 
