@@ -27,7 +27,7 @@ Copy paste the **_Copypasta** folder into your project folder.
 	
 	- **DisplayLine.** Draws a line.
 	
-	- **DisplayThiccLine** Draws a line which is actually an extruded circle along the line to make it more visible. 
+	- **DisplayThiccLine.** Draws a line which is actually an extruded circle along the line to make it more visible. 
 	
 	- **DisplayVertices.** Draws a pixel for each coordinate. These can be hard to see so I've used some emission shader to make them more visible.
 	
