@@ -45,6 +45,13 @@ public class TestGraphicsController : MonoBehaviour
         }
 
         DisplayGraphics.DisplayLineSegments(lineSegments, Materials.ColorOptions.Yellow);
+
+
+
+        //Test thicc Line
+        Circle circleThicc = new(transform.position + Vector3.one * 4f, 3f);
+
+        DisplayGraphics.DisplayThiccLine(circleThicc.GetCircleVertices(Circle.Space2D.XY), 0.2f, 6, Materials.ColorOptions.Red);
     }
 
 
