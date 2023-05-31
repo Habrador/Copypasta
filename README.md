@@ -43,3 +43,5 @@ Copy paste the **_Copypasta** folder into your project folder.
 	- **AddValueToAverage.** If you want to add to an average, and you don't want to calculate the average every time because it's costly, you can use this method to add to an already existing average. 
 
 	- **PrintScreen.** Takes a screenshot of your Unity project. 
+	
+	- **DestroyAllChildren.** Destroys all children to a Transform. This should be easy but I tend to always forget how it's done.
