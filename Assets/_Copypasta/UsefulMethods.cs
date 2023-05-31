@@ -67,13 +67,12 @@ namespace Copypasta
 
 
 
-        //Find all children to a transform
-        //Useful if you later want to destroy them, which can't be done here because it requires that the class inherits from MonoBehaviour 
-        public static GameObject[] GetAllChildren(Transform parentTransform)
+        //Destroy all children to a transform
+        public static void DestroyAllChildren(Transform parentTransform)
         {            
             int i = 0;
 
-            //Array to hold all child objects
+            //Temp array to hold all child objects
             GameObject[] allChildren = new GameObject[parentTransform.childCount];
 
             //Find all children and store them in the array
@@ -83,7 +82,10 @@ namespace Copypasta
                 i += 1;
             }
 
-            return allChildren;
+            foreach (GameObject c in allChildren)
+            {
+                UnityEngine.Object.Destroy(c);
+            }
         }
     }
 }

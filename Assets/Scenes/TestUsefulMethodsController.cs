@@ -10,11 +10,6 @@ public class TestUsefulMethodsController : MonoBehaviour
 
     private void Start()
     {
-        GameObject[] allChildren = UsefulMethods.GetAllChildren(parentTransform);
-
-        foreach (GameObject c in allChildren)
-        {
-            Destroy(c);
-        }
+        UsefulMethods.DestroyAllChildren(parentTransform);
     }
 }
