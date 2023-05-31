@@ -64,5 +64,26 @@ namespace Copypasta
 
             ScreenCapture.CaptureScreenshot(path + fileName);
         }
+
+
+
+        //Find all children to a transform
+        //Useful if you later want to destroy them, which can't be done here because it requires that the class inherits from MonoBehaviour 
+        public static GameObject[] GetAllChildren(Transform parentTransform)
+        {            
+            int i = 0;
+
+            //Array to hold all child objects
+            GameObject[] allChildren = new GameObject[parentTransform.childCount];
+
+            //Find all children and store them in the array
+            foreach (Transform child in parentTransform)
+            {
+                allChildren[i] = child.gameObject;
+                i += 1;
+            }
+
+            return allChildren;
+        }
     }
 }
